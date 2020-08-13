@@ -252,19 +252,6 @@ function main() {
 		
 	});
 
-	loadGLTF('model/gltf/basis/AgiHqSmall.gltf', [0, 0, 0], [0.1, 0.1, 0.1]).then(function(gltf){
-		//'model/gltf/capoeira/Capoeira.gltf
-		//[1, 0, 0]
-		//console.log('termine gltf!');
-		mixerCap = new THREE.AnimationMixer( gltf.scene );
-		var action = mixerCap.clipAction( gltf.animations[ 0 ] );
-		action.play();
-		
-	}).catch(function (err) {
-		console.log(err);
-		
-	});
-
 
 
 	/*loadFBX('model/fbx/avatar1.fbx', [2, 0, -1], [0.01, 0.01, 0.01]).then(function(obj1){
@@ -489,7 +476,7 @@ function initCannon(){
 	world.add(meshBody2);
 	bodies.push(meshBody2);
 
-	//Creatr Mesh2 
+	//Creatr Mesh3 
 	var mass2 = 0.5 ;
 	meshes.push(GLTF_Objects[2]);
 	var meshShape2 = threeToCannon(GLTF_Objects[1]);
@@ -499,7 +486,7 @@ function initCannon(){
 	world.add(meshBody2);
 	bodies.push(meshBody2);
 
-	//Creatr Mesh3 
+	//Creatr Mesh4
 	var mass2 = 0.5 ;
 	meshes.push(GLTF_Objects[3]);
 	var meshShape2 = threeToCannon(GLTF_Objects[1]);
@@ -509,15 +496,7 @@ function initCannon(){
 	world.add(meshBody2);
 	bodies.push(meshBody2);
 
-	//Creatr Mesh4 
-	/*var mass2 = 0.5 ;
-	meshes.push(GLTF_Objects[4]);
-	var meshShape2 = threeToCannon(GLTF_Objects[1]);
-	var meshBody2 = new CANNON.Body({ mass: mass2 });
-	meshBody2.addShape(meshShape2);
-	meshBody2.position.set(0, 10, 0); //(0, 0.75, 0)
-	world.add(meshBody2);
-	bodies.push(meshBody2);*/
+	
 
 	
 
